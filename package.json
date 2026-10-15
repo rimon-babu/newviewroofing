@@ -1,0 +1,21 @@
+{
+  "name": "newview-roofing-redesign",
+  "version": "1.0.0",
+  "private": true,
+  "description": "New View Roofing website redesign — static HTML/CSS/JS, no build step required to view.",
+  "scripts": {
+    "serve": "npx --yes http-server . -p 8080 -c-1",
+    "images": "node scripts/optimize-images.mjs",
+    "rename": "node scripts/rename-assets.mjs",
+    "sprite": "node scripts/build-sprite.mjs",
+    "capture": "node motion/capture/capture.mjs",
+    "audio": "python motion/audio/generate_audio.py",
+    "video": "bash motion/build/assemble.sh"
+  },
+  "devDependencies": {
+    "@fontsource/archivo": "^5.0.0",
+    "@fontsource/inter": "^5.0.0",
+    "playwright": "^1.48.0",
+    "sharp": "^0.33.0"
+  }
+}
